@@ -17,7 +17,7 @@ quant     : atom KLEENE             { $$=[].concat($1, [["*"]]); }
           | atom                    { $$=$1; }
           ;
                                         /*maybe illegal*/
-oneof     : oneof atom              { $$=[].concat($1, $2, [["|"]]); }
+oneof     : oneof sp atom           { $$=[].concat($1, $3, [["|"]]); }
           | oneof binop atom        { $$=[].concat($1, $3, $2); }
           | atom                    { $$=$1; }
           ;

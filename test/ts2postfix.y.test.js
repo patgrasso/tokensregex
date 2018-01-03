@@ -1,6 +1,5 @@
-const expect  = require('chai').expect;
-const parser  = require('../lib/ts2postfix.js');
-const parse   = parser.parse;
+const expect    = require('chai').expect;
+const { parse } = require('../lib/ts2postfix.js');
 
 describe('ts2postfix.y', () => {
 
@@ -192,12 +191,12 @@ describe('ts2postfix.y', () => {
 
   });
 
-  let other = { '+': '*', '*': '+' };
-
   [ ['+', 'plus'], ['*', 'kleene star'] ].forEach(([ o, desc ]) => {
+    let other = { '+': '*', '*': '+' };
+
     describe(`'${o}' ${desc}`, () => {
 
-      it('a+b => a + b .', () => {
+      it(`a${o}b => a ${o} b .`, () => {
         expect(parse(`a${o}b`)).to.eql([
           [ 'WORD', 'a' ],
           [ o ],
