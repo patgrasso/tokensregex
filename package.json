@@ -1,0 +1,26 @@
+{
+  "name": "tokensregex",
+  "version": "1.0.0",
+  "description": "JS implementation of the Stanford NLP TokensRegex parser",
+  "main": "index.j",
+  "scripts": {
+    "test": "mocha",
+    "ts2postfix": "jison lib/ts2postfix.y lib/ts2postfix.l -o lib/ts2postfix.js"
+  },
+  "keywords": [
+    "nlp",
+    "stanford",
+    "tokensregex",
+    "regular",
+    "expression",
+    "natural",
+    "language",
+    "processing"
+  ],
+  "author": "Patrick Grasso",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^4.1.0"
+  }
+}
