@@ -50,7 +50,7 @@ seem familiar.
 | ~~"_abc_"~~             | The text of the token exactly equals the string abc.  |
 | /_abc_/             | The text of the token matches the regular expression specified by abc.              |
 | { /_key_/:"/abc/" } | The token annotation corresponding to key matches the string abc exactly.           |
-| { /_key_/:/_abc_/ } | The token annotation corresponding to key matches the regular expression specified by abc. |
+| { /_key_/:/abc/ }   | The token annotation corresponding to key matches the regular expression specified by abc. |
 | **Numerics**        |                                                       |
 | ~~{ _key_==_number_ }~~ | The token annotation corresponding to key is equal to number.                       |
 | ~~{ _key_!=_number_ }~~ | The token annotation corresponding to key is not equal to number.                   |
@@ -64,7 +64,7 @@ seem familiar.
 | ~~{ _key_::NOT\_NIL } or { _key_::EXISTS }~~      | The token annotation corresponding to key exist.          |
 | **Sequencing**      |                                                       |
 | _X_ _Y_             | _X_ followed by _Y_                                   |
-| _X_ | _Y_           | _X_ or _Y_                                            |
+| _X_ \| _Y_          | _X_ or _Y_                                            |
 | _X_ & _Y_           | _X_ and _Y_                                           |
 | **Groups**          |                                                       |
 | (_X_)               | _X_ as a capturing group                              |
