@@ -1,6 +1,6 @@
 {
   "name": "tokensregex",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "JS implementation of the Stanford NLP TokensRegex parser",
   "main": "index.j",
   "scripts": {
